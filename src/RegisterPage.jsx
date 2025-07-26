@@ -13,7 +13,7 @@ function RegisterPage({ setShowLogin }) {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5001/api/users/register", formData)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/api/users/register`, formData)
       .then((res) => {
         console.log("Registro exitoso:", res.data);
         alert("Registro exitoso, ahora puedes iniciar sesión");
