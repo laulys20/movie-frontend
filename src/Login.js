@@ -10,7 +10,7 @@ function LoginPage({ onLoginSuccess, setShowLogin }) {
     e.preventDefault();
 
     axios
-      .post("http://localhost:5001/api/users/login", { email, password })
+      .post(`${process.env.REACT_APP_BACKEND_URL}/api/users/login`, { email, password })
       .then((res) => {
         localStorage.setItem("token", res.data.token);
         onLoginSuccess();
