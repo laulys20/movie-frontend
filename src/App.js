@@ -4,7 +4,7 @@ import LoginPage from "./Login";
 import RegisterPage from "./RegisterPage";
 import "./App.css";
 
-const API_URL = "http://localhost:5001/api/movies";
+const API_URL = `${process.env.REACT_APP_BACKEND_URL}/api/movies`;
 
 function App() {
   const [showLogin, setShowLogin] = useState(true);
